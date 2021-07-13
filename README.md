@@ -17,7 +17,7 @@ You can also import the Loggy Class to new the logger object into your other pyt
 
 In the future, we will upload Loggy to pip so everyone can install in one command. 
 ```shell
-pip install loggy
+pip install (package name, we dont have it right now)
 ```
 
 ## TODO Features
