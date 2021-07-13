@@ -31,3 +31,5 @@ pip install loggy
 ## Contributor
 If you want to contribute this project, please contact me with Email. We can talk about how to play the game.
 
+## Source
+Logo: Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](www.flaticon.com)
