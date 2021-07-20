@@ -7,6 +7,8 @@ We love you to join our game! You can make the contributing whether it's:
 * Proposing new features
 * Becoming a maintainer
 
+If you have wish to contribute some input for Loggy, please contact me with create an issue. We can discuss more details.
+
 # Code of Conduct
 The code of conduct is in [CODE_OF_CONDUCT.md](https://github.com/eric12345566/loggy/blob/master/CODE_OF_CONDUCT.md)
 
