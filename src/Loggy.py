@@ -1,5 +1,5 @@
 from theme.ClassicTheme import ClassicTheme
-from LogLevelEnum import LogLevel
+from src.LogLevelEnum import LogLevel
 
 
 class Loggy:
@@ -21,8 +21,44 @@ class Loggy:
 
         self.__print_log(render_log)
 
+    def debug(self, log, *texts, name=None):
+        if name is not None:
+            render_log = self.__theme.apply_theme(LogLevel.DEBUG, log, texts, name=name)
+        else:
+            render_log = self.__theme.apply_theme(LogLevel.DEBUG, log, texts, name=self.__module_name)
+
+        self.__print_log(render_log)
+
+    def warning(self, log, *texts, name=None):
+        if name is not None:
+            render_log = self.__theme.apply_theme(LogLevel.WARNING, log, texts, name=name)
+        else:
+            render_log = self.__theme.apply_theme(LogLevel.WARNING, log, texts, name=self.__module_name)
+
+        self.__print_log(render_log)
+
+    def error(self, log, *texts, name=None):
+        if name is not None:
+            render_log = self.__theme.apply_theme(LogLevel.ERROR, log, texts, name=name)
+        else:
+            render_log = self.__theme.apply_theme(LogLevel.ERROR, log, texts, name=self.__module_name)
+
+        self.__print_log(render_log)
+
+    def critical(self, log, *texts, name=None):
+        if name is not None:
+            render_log = self.__theme.apply_theme(LogLevel.CRITICAL, log, texts, name=name)
+        else:
+            render_log = self.__theme.apply_theme(LogLevel.CRITICAL, log, texts, name=self.__module_name)
+
+        self.__print_log(render_log)
+
 
 if __name__ == '__main__':
     logger = Loggy("Loggy Test")
     # logger.set_theme(ClassicTheme)
     logger.info("This is the info")
+    logger.debug("This is the info")
+    logger.warning("This is the info")
+    logger.error("This is the info")
+    logger.critical("This is the info")
