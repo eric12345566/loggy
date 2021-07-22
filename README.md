@@ -1,4 +1,4 @@
-# Loggy - Convenient, friendly and clean logger for Python 
+# Loggy - Convenient, friendly and clean logger for Python
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/eric12345566/loggy/master/img/Logo-v1.png" alt="Loggy Logo" width="300"/>
@@ -12,6 +12,7 @@ Something like multiple type of logging(debug, info, warning, or you can define 
 have some theme for the cute log. Right now, Loggy can be your second choice.
 
 ## Install
+
 Right now, we are still in early dev. version. We don't recommend using it in serious project.
 
 If you really have interest to test it, please clone it with git and run our test py file for demo.
@@ -19,20 +20,23 @@ You can also import the Loggy Class to new the logger object into your other pyt
 (See Wiki file for more info).
 
 In the future, we will upload Loggy to pip so everyone can install in one command. 
+
 ```shell
 pip install (package name, we dont have it right now)
 ```
 
 ## TODO Features
-- Multiple logging type: default we have "debug", "info", "warning" and "error". User can define their new type of logging for more use case.
-- Different type, different color: multiple colors for multiple logging type
-- Customize Logging format is easy: using easy structure to define format
-- Theme System: you can customize theme for your logger, Highly customized
-- Log into logfile: all your log will log into the file, in the feature, you can easily connect to online monitor with our APIs
 
+-   Multiple logging type: default we have "debug", "info", "warning" and "error". User can define their new type of logging for more use case.
+-   Different type, different color: multiple colors for multiple logging type
+-   Customize Logging format is easy: using easy structure to define format
+-   Theme System: you can customize theme for your logger, Highly customized
+-   Log into logfile: all your log will log into the file, in the feature, you can easily connect to online monitor with our APIs
 
 ## Contributor
+
 If you want to contribute this project, please contact me with Email. We can talk about how to play the game.
 
 ## Source
+
 Logo: Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](www.flaticon.com)
