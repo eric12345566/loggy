@@ -65,6 +65,6 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         r_log = self.theme_log(log_level, log_text)
 
         for log in logs:
-            r_log += self.theme_log(log_level, log_text)
+            r_log += self.theme_log(log_level, log)
 
         return r_log

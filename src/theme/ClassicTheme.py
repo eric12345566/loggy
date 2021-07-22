@@ -10,7 +10,7 @@ class ClassicTheme(LoggyTheme):
         render_log += self.render_name(log_level, name)
         if name is not None:
             render_log += colored(" ", color="green")
-        render_log += self.render_log_text(log_level, log, texts)
+        render_log += self.render_log_text(log_level, log, *texts)
 
         return render_log
 
