@@ -1,4 +1,4 @@
-from theme.ClassicTheme import ClassicTheme
+from src.theme.ClassicTheme import ClassicTheme
 from src.LogLevelEnum import LogLevel
 
 
