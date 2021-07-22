@@ -10,6 +10,8 @@ class ClassicTheme(LoggyTheme):
         render_log += self.render_name(log_level, name)
         if name is not None:
             render_log += colored(" ", color="green")
+        render_log += self.render_log_level(log_level)
+        render_log += " "
         render_log += self.render_log_text(log_level, log, *texts)
 
         return render_log
@@ -28,6 +30,20 @@ class ClassicTheme(LoggyTheme):
             render_name = colored(" " + name + " ", color="magenta", attrs=['reverse', 'blink', 'bold'])
 
         return render_name
+
+    def theme_log_level(self, log_level):
+        render_log_level = ""
+        if log_level == LogLevel.INFO:
+            render_log_level = colored("[" + log_level.name + "]", color="green", attrs=['blink', 'bold'])
+        elif log_level == LogLevel.DEBUG:
+            render_log_level = colored("[" + log_level.name + "]", color="blue", attrs=['blink', 'bold'])
+        elif log_level == LogLevel.WARNING:
+            render_log_level = colored("[" + log_level.name + "]", color="yellow", attrs=['blink', 'bold'])
+        elif log_level == LogLevel.ERROR:
+            render_log_level = colored("[" + log_level.name + "]", color="red", attrs=['blink', 'bold'])
+        elif log_level == LogLevel.CRITICAL:
+            render_log_level = colored("[" + log_level.name + "]", color="magenta", attrs=['blink', 'bold'])
+        return render_log_level
 
     def theme_log(self, log_level, log_text):
         render_log = ""
