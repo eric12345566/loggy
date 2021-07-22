@@ -4,7 +4,8 @@
   <img src="https://raw.githubusercontent.com/eric12345566/loggy/master/img/Logo-v1.png" alt="Loggy Logo" width="300"/>
 </p>
 
-![License MIT](https://img.shields.io/badge/License-MIT-green)
+![License MIT](https://img.shields.io/github/license/eric12345566/loggy?style=for-the-badge)
+![python version](https://img.shields.io/github/pipenv/locked/python-version/eric12345566/loggy?style=for-the-badge)
 
 Sometimes, you need a logger for your program for a better coding experience.
 Something like multiple type of logging(debug, info, warning, or you can define your type), better with different colors. Maybe more,
