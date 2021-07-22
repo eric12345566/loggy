@@ -4,6 +4,8 @@
   <img src="https://raw.githubusercontent.com/eric12345566/loggy/master/img/Logo-v1.png" alt="Loggy Logo" width="300"/>
 </p>
 
+![License MIT](https://img.shields.io/badge/License-MIT-green)
+
 Sometimes, you need a logger for your program for a better coding experience.
 Something like multiple type of logging(debug, info, warning, or you can define your type), better with different colors. Maybe more,
 have some theme for the cute log. Right now, Loggy can be your second choice.
