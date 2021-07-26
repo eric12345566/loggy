@@ -7,7 +7,8 @@ class Loggy:
         self.__theme = theme()
         self.__module_name = module_name
 
-    def __print_log(self, log_text):
+    @staticmethod
+    def __print_log(log_text):
         print(log_text)
 
     def set_theme(self, loggyTheme):
