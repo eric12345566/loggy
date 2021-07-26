@@ -7,6 +7,7 @@
 ![License MIT](https://img.shields.io/github/license/eric12345566/loggy?style=for-the-badge)
 ![python version](https://img.shields.io/github/pipenv/locked/python-version/eric12345566/loggy?style=for-the-badge)
 [![codacy grade](https://img.shields.io/codacy/grade/729be4751aaa4a48922ade27d1a2855b?style=for-the-badge)](https://app.codacy.com/gh/eric12345566/loggy/commits)
+[![DeepSource](https://deepsource.io/gh/eric12345566/loggy.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/eric12345566/loggy/?ref=repository-badge)
 
 Sometimes, you need a logger for your program for a better coding experience.
 Something like multiple type of logging(debug, info, warning, or you can define your type), better with different colors. Maybe more,
