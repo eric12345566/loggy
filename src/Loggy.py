@@ -1,11 +1,14 @@
 from src.theme.ClassicTheme import ClassicTheme
-from src.LogLevelEnum import LogLevel
+from src.module.LogLevelEnum import LogLevel
+import time
 
 
 class Loggy:
-    def __init__(self, module_name=None, theme=ClassicTheme):
+    def __init__(self, module_name=None, theme=ClassicTheme, log_time=False):
         self.__theme = theme()
         self.__module_name = module_name
+        self.__log_time = log_time
+        self.__log_time_struct = "%m/%d %H:%M:%S"
 
     @staticmethod
     def __print_log(log_text):
@@ -14,11 +17,21 @@ class Loggy:
     def set_theme(self, loggyTheme):
         self.__theme = loggyTheme()
 
+    def set_log_time(self, log_time):
+        self.__log_time = log_time
+
+    def set_log_time_struct(self, time_struct):
+        self.__log_time_struct = time_struct
+
     def info(self, log, *texts, name=None):
+        log_time = time.localtime()
+        log_time_string = time.strftime(self.__log_time_struct, log_time)
         if name is not None:
-            render_log = self.__theme.apply_theme(LogLevel.INFO, log, *texts, name=name)
+            render_log = self.__theme.apply_theme(LogLevel.INFO, log, *texts, name=name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
         else:
-            render_log = self.__theme.apply_theme(LogLevel.INFO, log, *texts, name=self.__module_name)
+            render_log = self.__theme.apply_theme(LogLevel.INFO, log, *texts, name=self.__module_name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
 
         self.__print_log(render_log)
 
@@ -56,10 +69,10 @@ class Loggy:
 
 
 if __name__ == '__main__':
-    logger = Loggy("Loggy Test")
+    logger = Loggy("Loggy Test", log_time=True)
     # logger.set_theme(ClassicTheme)
-    logger.info("This is the info", " hello", "gopood")
-    logger.debug("This is the info")
-    logger.warning("This is the info")
-    logger.error("This is the info")
-    logger.critical("This is the info")
+    logger.info("This is the info", " hello")
+    # logger.debug("This is the info")
+    # logger.warning("This is the info")
+    # logger.error("This is the info")
+    # logger.critical("This is the info")
