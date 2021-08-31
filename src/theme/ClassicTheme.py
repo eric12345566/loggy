@@ -1,12 +1,15 @@
 from termcolor import colored
-from src.LoggyTheme import LoggyTheme
-from src.LogLevelEnum import LogLevel
+from src.module.LoggyTheme import LoggyTheme
+from src.module.LogLevelEnum import LogLevel
 
 
 class ClassicTheme(LoggyTheme):
 
-    def apply_theme(self, log_level, log, *texts, name=None):
+    def apply_theme(self, log_level, log, *texts, name=None, log_time=False, log_time_string=""):
         render_log = ""
+        if log_time:
+            render_log += colored(" " + log_time_string + " ", color="green", attrs=['reverse', 'blink', 'bold'])
+            render_log += " "
         render_log += self.render_name(log_level, name)
         if name is not None:
             render_log += colored(" ", color="green")
