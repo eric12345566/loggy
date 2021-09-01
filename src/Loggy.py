@@ -26,6 +26,7 @@ class Loggy:
     def info(self, log, *texts, name=None):
         log_time = time.localtime()
         log_time_string = time.strftime(self.__log_time_struct, log_time)
+        
         if name is not None:
             render_log = self.__theme.apply_theme(LogLevel.INFO, log, *texts, name=name
                                                   , log_time=self.__log_time, log_time_string=log_time_string)
@@ -36,34 +37,54 @@ class Loggy:
         self.__print_log(render_log)
 
     def debug(self, log, *texts, name=None):
+        log_time = time.localtime()
+        log_time_string = time.strftime(self.__log_time_struct, log_time)
+
         if name is not None:
-            render_log = self.__theme.apply_theme(LogLevel.DEBUG, log, *texts, name=name)
+            render_log = self.__theme.apply_theme(LogLevel.DEBUG, log, *texts, name=name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
         else:
-            render_log = self.__theme.apply_theme(LogLevel.DEBUG, log, *texts, name=self.__module_name)
+            render_log = self.__theme.apply_theme(LogLevel.DEBUG, log, *texts, name=self.__module_name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
 
         self.__print_log(render_log)
 
     def warning(self, log, *texts, name=None):
+        log_time = time.localtime()
+        log_time_string = time.strftime(self.__log_time_struct, log_time)
+
         if name is not None:
-            render_log = self.__theme.apply_theme(LogLevel.WARNING, log, *texts, name=name)
+            render_log = self.__theme.apply_theme(LogLevel.WARNING, log, *texts, name=name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
         else:
-            render_log = self.__theme.apply_theme(LogLevel.WARNING, log, *texts, name=self.__module_name)
+            render_log = self.__theme.apply_theme(LogLevel.WARNING, log, *texts, name=self.__module_name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
 
         self.__print_log(render_log)
 
     def error(self, log, *texts, name=None):
+        log_time = time.localtime()
+        log_time_string = time.strftime(self.__log_time_struct, log_time)
+
         if name is not None:
-            render_log = self.__theme.apply_theme(LogLevel.ERROR, log, *texts, name=name)
+            render_log = self.__theme.apply_theme(LogLevel.ERROR, log, *texts, name=name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
         else:
-            render_log = self.__theme.apply_theme(LogLevel.ERROR, log, *texts, name=self.__module_name)
+            render_log = self.__theme.apply_theme(LogLevel.ERROR, log, *texts, name=self.__module_name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
 
         self.__print_log(render_log)
 
     def critical(self, log, *texts, name=None):
+        log_time = time.localtime()
+        log_time_string = time.strftime(self.__log_time_struct, log_time)
+
         if name is not None:
-            render_log = self.__theme.apply_theme(LogLevel.CRITICAL, log, *texts, name=name)
+            render_log = self.__theme.apply_theme(LogLevel.CRITICAL, log, *texts, name=name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
         else:
-            render_log = self.__theme.apply_theme(LogLevel.CRITICAL, log, *texts, name=self.__module_name)
+            render_log = self.__theme.apply_theme(LogLevel.CRITICAL, log, *texts, name=self.__module_name
+                                                  , log_time=self.__log_time, log_time_string=log_time_string)
 
         self.__print_log(render_log)
 
@@ -72,7 +93,7 @@ if __name__ == '__main__':
     logger = Loggy("Loggy Test", log_time=True)
     # logger.set_theme(ClassicTheme)
     logger.info("This is the info", " hello")
-    # logger.debug("This is the info")
-    # logger.warning("This is the info")
-    # logger.error("This is the info")
-    # logger.critical("This is the info")
+    logger.debug("This is the info")
+    logger.warning("This is the info")
+    logger.error("This is the info")
+    logger.critical("This is the info")

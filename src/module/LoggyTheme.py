@@ -34,6 +34,18 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         return NotImplemented
 
     @abc.abstractmethod
+    def theme_log_time(self, log_level, log_time_text):
+        """
+        Render the log time to the colorful output string, Implementation details on github repo wiki for tutorial and
+        api docs
+
+        :param log_level: enum LogLevel
+        :param log_time_text: the log time string generate by Loggy core
+        :return: rendered colorful log time string
+        """
+        return NotImplemented
+
+    @abc.abstractmethod
     def theme_log_level(self, log_level):
         """
         Render the log level to the color for output string. Implementation details on github repo wiki for tutorial and
@@ -66,6 +78,14 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         else:
             r_name = self.theme_name(log_level, name)
         return r_name
+
+    def render_log_time(self, log_level, log_time_string):
+        """
+        Render the log time into colorful string. Normally you won't need to override this function
+        :param log_time_string: the log time string generate by Loggy core
+        :return: render log time string
+        """
+        return self.theme_log_time(log_level, log_time_string)
 
     def render_log_level(self, log_level):
         """
