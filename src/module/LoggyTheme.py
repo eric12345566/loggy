@@ -11,7 +11,6 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         """
         Theme Designer can customize the beautiful logs in this function, Implementation details on github repo wiki
         for tutorial and api docs.
-        
         :param log_level: enum LogLevel
         :param log: log text
         :param texts: log text list
@@ -38,7 +37,6 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         """
         Render the log time to the colorful output string, Implementation details on github repo wiki for tutorial and
         api docs
-
         :param log_level: enum LogLevel
         :param log_time_text: the log time string generate by Loggy core
         :return: rendered colorful log time string
