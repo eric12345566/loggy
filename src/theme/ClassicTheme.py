@@ -34,7 +34,7 @@ class ClassicTheme(LoggyTheme):
 
         return render_name
 
-    def theme_log_time(self, log_level, log_time_string):
+    def theme_log_time(self, log_level, log_time_text):
         render_log = ""
         if log_level is LogLevel.INFO:
             render_log = colored(" " + log_time_string + " ", color="green", attrs=['reverse', 'blink', 'bold'])
