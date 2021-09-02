@@ -5,9 +5,9 @@ from src.module.LogLevelEnum import LogLevel
 
 class ClassicTheme(LoggyTheme):
 
-    def apply_theme(self, log_level, log, *texts, name=None, log_time=False, log_time_string=""):
+    def apply_theme(self, log_level, log, *texts, name=None, show_log_time=False, log_time_string=""):
         render_log = ""
-        if log_time:
+        if show_log_time:
             render_log += self.render_log_time(log_level, log_time_string)
             render_log += " "
         render_log += self.render_name(log_level, name)

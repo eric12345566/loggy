@@ -7,7 +7,7 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractmethod
-    def apply_theme(self, log_level, log, *texts, name=None, log_time=False, log_time_string=""):
+    def apply_theme(self, log_level, log, *texts, name=None, show_log_time=False, log_time_string=""):
         """
         Theme Designer can customize the beautiful logs in this function, Implementation details on github repo wiki
         for tutorial and api docs.
@@ -16,7 +16,7 @@ class LoggyTheme(metaclass=abc.ABCMeta):
         :param log: log text
         :param texts: log text list
         :param name: user can change the module_name with temporary this param
-        :param log_time: is log output the time or not
+        :param show_log_time: is log output the time or not
         :param log_time_string: the log time string if log time is enable
         :return: rendered colorful log string
         """
