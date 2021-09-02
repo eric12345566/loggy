@@ -37,15 +37,15 @@ class ClassicTheme(LoggyTheme):
     def theme_log_time(self, log_level, log_time_text):
         render_log = ""
         if log_level is LogLevel.INFO:
-            render_log = colored(" " + log_time_string + " ", color="green", attrs=['reverse', 'blink', 'bold'])
+            render_log = colored(" " + log_time_text + " ", color="green", attrs=['reverse', 'blink', 'bold'])
         elif log_level is LogLevel.DEBUG:
-            render_log = colored(" " + log_time_string + " ", color="blue", attrs=['reverse', 'blink', 'bold'])
+            render_log = colored(" " + log_time_text + " ", color="blue", attrs=['reverse', 'blink', 'bold'])
         elif log_level is LogLevel.WARNING:
-            render_log = colored(" " + log_time_string + " ", color="yellow", attrs=['reverse', 'blink', 'bold'])
+            render_log = colored(" " + log_time_text + " ", color="yellow", attrs=['reverse', 'blink', 'bold'])
         elif log_level is LogLevel.ERROR:
-            render_log = colored(" " + log_time_string + " ", color="red", attrs=['reverse', 'blink', 'bold'])
+            render_log = colored(" " + log_time_text + " ", color="red", attrs=['reverse', 'blink', 'bold'])
         elif log_level is LogLevel.CRITICAL:
-            render_log = colored(" " + log_time_string + " ", color="magenta", attrs=['reverse', 'blink', 'bold'])
+            render_log = colored(" " + log_time_text + " ", color="magenta", attrs=['reverse', 'blink', 'bold'])
 
         return render_log
 
