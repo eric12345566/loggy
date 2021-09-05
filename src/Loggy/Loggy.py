@@ -1,5 +1,5 @@
-from src.theme.ClassicTheme import ClassicTheme
-from src.module.LogLevelEnum import LogLevel
+from .theme.ClassicTheme import ClassicTheme
+from .module.LogLevelEnum import LogLevel
 import time
 
 
@@ -125,16 +125,3 @@ class Loggy:
 
         self.__print_log(render_log)
 
-
-if __name__ == '__main__':
-    Loggy.class_set_show_log_time(False)
-    logger = Loggy("Loggy Test", show_log_time=True)
-    # logger.set_theme(ClassicTheme)
-    logger.info("This is the info", " hello")
-    logger.debug("This is the info")
-    logger.warning("This is the info")
-    logger.error("This is the info")
-    logger.critical("This is the info")
-
-    logger2 = Loggy("Loggy2")
-    logger2.info("hello")

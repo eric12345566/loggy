@@ -4,6 +4,7 @@
   <img src="https://raw.githubusercontent.com/eric12345566/loggy/master/img/Logo-v1.png" alt="Loggy Logo" width="300"/>
 </p>
 
+![PyPI](https://img.shields.io/pypi/v/LoggyLogger?style=for-the-badge)
 ![License MIT](https://img.shields.io/github/license/eric12345566/loggy?style=for-the-badge)
 ![python version](https://img.shields.io/github/pipenv/locked/python-version/eric12345566/loggy?style=for-the-badge)
 [![codacy grade](https://img.shields.io/codacy/grade/729be4751aaa4a48922ade27d1a2855b?style=for-the-badge)](https://app.codacy.com/gh/eric12345566/loggy/commits)
@@ -24,8 +25,32 @@ You can also import the Loggy Class to new the logger object into your other pyt
 In the future, we will upload Loggy to pip so everyone can install in one command. 
 
 ```shell
-pip install (package name, we dont have it right now)
+pip install LoggyLogger
 ```
+
+## Quick Usage
+
+First, lets born a Loggy object.
+
+```python
+from Loggy import Loggy
+
+loggy = Loggy("main.py") # The string is the module name what you log from
+```
+
+That's it! Now you can use let loggy to print the colorful and beautiful log at the console.
+
+We have 5 logging level in Loggy. Different logging level have the different color in the default logging theme.
+
+```python
+loggy.info("This is info log")
+loggy.debug("This is debug log")
+loggy.warning("This is warning log")
+loggy.error("This is error log")
+loggy.critical("This is critical log")
+```
+
+If you want to make your own Loggy logging theme. You can implement the abstract class "LoggyTheme". You can check out our Wiki tutorial (its building right now..... coming soon!).
 
 ## TODO Features
 

@@ -1,6 +1,6 @@
-from termcolor import colored
-from src.module.LoggyTheme import LoggyTheme
-from src.module.LogLevelEnum import LogLevel
+from ..module.termcolor import colored
+from ..module.LoggyTheme import LoggyTheme
+from ..module.LogLevelEnum import LogLevel
 
 
 class ClassicTheme(LoggyTheme):
