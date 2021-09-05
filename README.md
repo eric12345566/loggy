@@ -54,15 +54,26 @@ If you want to make your own Loggy logging theme. You can implement the abstract
 
 ## TODO Features
 
--   Multiple logging type: default we have "debug", "info", "warning" and "error". User can define their new type of logging for more use case.
--   Different type, different color: multiple colors for multiple logging type
--   Customize Logging format is easy: using easy structure to define format
--   Theme System: you can customize theme for your logger, Highly customized
--   Log into logfile: all your log will log into the file, in the feature, you can easily connect to online monitor with our APIs
+- [x] Multiple logging type: default we have "debug", "info", "warning" and "error". User can define their new type of logging for more use case.
+- [x] Different type, different color: multiple colors for multiple logging type
+- [x] Customize Logging format is easy: using easy structure to define format
+- [x] Theme System: you can customize theme for your logger, Highly customized
+- [ ] Log into logfile: all your log will log into the file, in the feature, you can easily connect to online monitor with our APIs
 
 ## Contributor
 
-If you want to contribute this project, please contact me with Email. We can talk about how to play the game.
+If you want to join Loggy Dev Teams and contribute to the Loggy project. You can choose whatever you want to do from the task list down below:
+
+1. Give Loggy a suggestion or cool idea
+2. Help Loggy develope new feature
+3. Create new theme for Loggy
+4. Help Loggy write Wiki docs or translate into your favorite language
+5. Something else I haven't thought of, but it is helpful to Loggy
+
+You can send a PR to our Loggy project, we can discuss more!
+
+## Special Thanks
+**[termcolor](https://pypi.org/project/termcolor/)**: We use this to colorful our loggy log. This module is right now build in Loggy. Thanks to termcolor!
 
 ## Source
 
