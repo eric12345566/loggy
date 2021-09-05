@@ -5,7 +5,7 @@ with open("../README.md", "r") as fh:
 
 setuptools.setup(
     name="LoggyLogger",
-    version="1.0.0",
+    version="1.0.1",
     author="Eric Shih",
     author_email="eric12345566@gmail.com",
     description="Convenient, friendly and clean logger for Python",
